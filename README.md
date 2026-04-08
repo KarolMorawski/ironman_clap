@@ -2,22 +2,32 @@
 
 Skrypt Python wykrywający podwójne klasnięcie w dłonie przez mikrofon MacBooka i otwierający film w Safari.
 
+## Warianty
+
+| Plik | Wymaga Homebrew | Biblioteka audio |
+|---|---|---|
+| `clap_launcher.py` | tak | `pyaudio` + portaudio z brew |
+| `clap_launcher_nobrew.py` | **nie** | `sounddevice` (binaria wbudowane) |
+
 ## Wymagania
 
 - macOS z Safari
 - Python 3.10+
-- Homebrew (do instalacji portaudio)
+- Homebrew — tylko dla `clap_launcher.py`
 
 ## Uruchomienie
 
+**Z Homebrew:**
 ```bash
 python3 clap_launcher.py
 ```
 
-Przy pierwszym uruchomieniu skrypt automatycznie:
-1. Instaluje `portaudio` przez Homebrew
-2. Tworzy środowisko wirtualne `.venv`
-3. Instaluje `pyaudio` i `numpy` w `.venv`
+**Bez Homebrew:**
+```bash
+python3 clap_launcher_nobrew.py
+```
+
+Przy pierwszym uruchomieniu skrypt automatycznie tworzy venv i instaluje zależności.
 
 > macOS poprosi o pozwolenie na dostęp do mikrofonu — należy zaakceptować.
 
@@ -27,7 +37,7 @@ Po uruchomieniu skrypt nasłuchuje mikrofonu. **Klasnij dwukrotnie** — Safari 
 
 ## Konfiguracja
 
-Parametry na górze pliku `clap_launcher.py`:
+Parametry na górze każdego pliku (identyczne w obu wariantach):
 
 | Zmienna | Domyślnie | Opis |
 |---|---|---|

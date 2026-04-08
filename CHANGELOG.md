@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## [1.1.0] — 2026-04-08
+
+### feat
+- Dodano `clap_launcher_nobrew.py` — wariant bez zależności od Homebrew
+- Używa `sounddevice` (wbudowane binaria PortAudio) zamiast `pyaudio`
+- Osobny venv `.venv_nobrew`, niezależny od wersji głównej
+- Próg amplitudy w skali 0.0–1.0 (float32) zamiast int16
+
 ## [1.0.0] — 2026-04-08
 
 ### feat
