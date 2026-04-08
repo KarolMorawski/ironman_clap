@@ -153,6 +153,14 @@ client.login(tokenstore=open(TOKEN_FILE).read())
 - refactor: refaktoring bez zmiany funkcjonalności
 - test: testy
 
+### Wersjonowanie
+- Format: MAJOR.MINOR.PATCH (np. 1.0.0, 1.1.0, 1.2.0)
+- Pierwsza wersja produkcyjna: 1.0.0
+- Nowa funkcja: zwiększ MINOR (1.0.0 → 1.1.0)
+- Naprawa błędu: zwiększ PATCH (1.1.0 → 1.1.1)
+- Zmiana łamiąca kompatybilność: zwiększ MAJOR (1.x.x → 2.0.0)
+- Każdy release ma wpis w CHANGELOG.md z nagłówkiem `## [X.Y.Z] — YYYY-MM-DD`
+
 ## Backlog (planowane funkcje)
 - [ ] Zapis tokenu sesji Garmin (brak potrzeby logowania przy każdym uruchomieniu)
 - [ ] Repeat groups (interwały z powtórzeniami w natywnym formacie Garmin)
